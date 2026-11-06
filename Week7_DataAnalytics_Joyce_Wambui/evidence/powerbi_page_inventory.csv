@@ -1,0 +1,14 @@
+Page,Visuals,Slicers,Drillthrough
+Dashboards,3,0,False
+Executive Dashboard,17,2,False
+Patient Analytics,16,4,False
+Clinical Analytics,15,4,False
+Financial Dashboard,13,4,False
+Operational Dashboard,15,4,False
+Patient Experience Dashboard,14,4,False
+Patients KPIS,6,0,True
+Appointment KPIS,4,0,False
+Clinical KPIS,5,0,True
+Healthcare Staff IDS,4,0,False
+Operational KPIS,4,0,True
+Financial KPIS,5,0,True

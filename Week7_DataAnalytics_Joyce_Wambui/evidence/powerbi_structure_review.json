@@ -1,0 +1,2723 @@
+{
+  "review_date": "2026-11-02",
+  "archive_is_pbix_container": true,
+  "page_count": 13,
+  "diagram_table_count": 19,
+  "table_names": [
+    "Dim_Department",
+    "Dim_Facility",
+    "Dim_Geographical_Location",
+    "Fact_Diagnoses",
+    "Fact_Appointments",
+    "Fact_Laboratory_Tests",
+    "Fact_Admissions",
+    "Fact_Billing",
+    "Fact_Insurance_Claims",
+    "Dim_Patients",
+    "Fact_Payments",
+    "Fact_Prescripitions",
+    "Dim_Hospital_Facilities",
+    "Fact_Referrals",
+    "Dim_Patient_Feedback",
+    "Dim_Ownership_Types",
+    "Dim_Medical_Staffs",
+    "Fact_Revenue_Summary",
+    "Dim_Healthcare_Services"
+  ],
+  "pages": [
+    {
+      "Page": "Dashboards",
+      "Visuals": 3,
+      "Slicers": 0,
+      "Drillthrough": false,
+      "VisualTypes": {
+        "actionButton": 1,
+        "textbox": 1,
+        "pageNavigator": 1
+      }
+    },
+    {
+      "Page": "Executive Dashboard",
+      "Visuals": 17,
+      "Slicers": 2,
+      "Drillthrough": false,
+      "VisualTypes": {
+        "textbox": 1,
+        "cardVisual": 6,
+        "shape": 5,
+        "group": 2,
+        "slicer": 2,
+        "image": 1
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visuals": 16,
+      "Slicers": 4,
+      "Drillthrough": false,
+      "VisualTypes": {
+        "hundredPercentStackedBarChart": 1,
+        "listSlicer": 2,
+        "barChart": 1,
+        "image": 1,
+        "group": 1,
+        "shape": 4,
+        "slicer": 2,
+        "columnChart": 1,
+        "filledMap": 1,
+        "pieChart": 1,
+        "actionButton": 1
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visuals": 15,
+      "Slicers": 4,
+      "Drillthrough": false,
+      "VisualTypes": {
+        "image": 1,
+        "slicer": 2,
+        "pivotTable": 1,
+        "barChart": 3,
+        "listSlicer": 2,
+        "group": 1,
+        "shape": 4,
+        "actionButton": 1
+      }
+    },
+    {
+      "Page": "Financial Dashboard",
+      "Visuals": 13,
+      "Slicers": 4,
+      "Drillthrough": false,
+      "VisualTypes": {
+        "listSlicer": 2,
+        "lineChart": 1,
+        "clusteredBarChart": 2,
+        "shape": 3,
+        "image": 1,
+        "group": 1,
+        "slicer": 2,
+        "actionButton": 1
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visuals": 15,
+      "Slicers": 4,
+      "Drillthrough": false,
+      "VisualTypes": {
+        "pivotTable": 1,
+        "clusteredBarChart": 2,
+        "image": 1,
+        "slicer": 2,
+        "listSlicer": 2,
+        "cardVisual": 1,
+        "group": 1,
+        "shape": 4,
+        "actionButton": 1
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visuals": 14,
+      "Slicers": 4,
+      "Drillthrough": false,
+      "VisualTypes": {
+        "pieChart": 1,
+        "clusteredBarChart": 2,
+        "shape": 4,
+        "image": 1,
+        "slicer": 2,
+        "listSlicer": 2,
+        "group": 1,
+        "cardVisual": 1
+      }
+    },
+    {
+      "Page": "Patients KPIS",
+      "Visuals": 6,
+      "Slicers": 0,
+      "Drillthrough": true,
+      "VisualTypes": {
+        "clusteredBarChart": 2,
+        "cardVisual": 2,
+        "textbox": 1,
+        "actionButton": 1
+      }
+    },
+    {
+      "Page": "Appointment KPIS",
+      "Visuals": 4,
+      "Slicers": 0,
+      "Drillthrough": false,
+      "VisualTypes": {
+        "textbox": 1,
+        "clusteredBarChart": 1,
+        "cardVisual": 1,
+        "lineChart": 1
+      }
+    },
+    {
+      "Page": "Clinical KPIS",
+      "Visuals": 5,
+      "Slicers": 0,
+      "Drillthrough": true,
+      "VisualTypes": {
+        "clusteredBarChart": 1,
+        "textbox": 1,
+        "pivotTable": 1,
+        "cardVisual": 1,
+        "actionButton": 1
+      }
+    },
+    {
+      "Page": "Healthcare Staff IDS",
+      "Visuals": 4,
+      "Slicers": 0,
+      "Drillthrough": false,
+      "VisualTypes": {
+        "cardVisual": 1,
+        "clusteredBarChart": 2,
+        "textbox": 1
+      }
+    },
+    {
+      "Page": "Operational KPIS",
+      "Visuals": 4,
+      "Slicers": 0,
+      "Drillthrough": true,
+      "VisualTypes": {
+        "textbox": 1,
+        "cardVisual": 1,
+        "clusteredBarChart": 1,
+        "actionButton": 1
+      }
+    },
+    {
+      "Page": "Financial KPIS",
+      "Visuals": 5,
+      "Slicers": 0,
+      "Drillthrough": true,
+      "VisualTypes": {
+        "cardVisual": 1,
+        "clusteredBarChart": 2,
+        "textbox": 1,
+        "actionButton": 1
+      }
+    }
+  ],
+  "query_fields": [
+    {
+      "Page": "Executive Dashboard",
+      "Visual": "758e8ac92bbc53469a3d",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Total Appointments",
+      "QueryRef": "Min(HC_Appointments.AppointmentID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Appointments"
+                }
+              },
+              "Property": "AppointmentID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Executive Dashboard",
+      "Visual": "8354435c6c784a5b0272",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Total Revenue",
+      "QueryRef": "Sum(HC_Revenue_Summary.Revenue)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Revenue_Summary"
+                }
+              },
+              "Property": "Revenue"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "Page": "Executive Dashboard",
+      "Visual": "9204d21dbdf1ab081573",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Total Doctors",
+      "QueryRef": "Min(HC_Appointments.DoctorID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Appointments"
+                }
+              },
+              "Property": "DoctorID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Executive Dashboard",
+      "Visual": "b1e97951f54decd6ad82",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Total Facilities",
+      "QueryRef": "Min(HC_Hospital_Facilities.FacilityID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Hospital_Facilities"
+                }
+              },
+              "Property": "FacilityID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Executive Dashboard",
+      "Visual": "8b67009f6e7f2a1819b0",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "ProvinceName",
+      "QueryRef": "Geographical_Location.ProvinceName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Geographical_Location"
+            }
+          },
+          "Property": "ProvinceName"
+        }
+      }
+    },
+    {
+      "Page": "Executive Dashboard",
+      "Visual": "f7f9f7db2377af130410",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "DepartmentName",
+      "QueryRef": "HC_Hospital_Facilities.DepartmentName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "DepartmentName"
+        }
+      }
+    },
+    {
+      "Page": "Executive Dashboard",
+      "Visual": "f7f9f7db2377af130410",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Hospital_Facilities.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Executive Dashboard",
+      "Visual": "e49fd2bf886b85f1724b",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Average Patient Satisfaction",
+      "QueryRef": "Sum(HC_Patient_Feedback.Rating)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Patient_Feedback"
+                }
+              },
+              "Property": "Rating"
+            }
+          },
+          "Function": 1
+        }
+      }
+    },
+    {
+      "Page": "Executive Dashboard",
+      "Visual": "f0c60f3707ad5816a20d",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Total Patients",
+      "QueryRef": "Min(HC_Patients.PatientID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Patients"
+                }
+              },
+              "Property": "PatientID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "2f23c44a3847d676c85c",
+      "Type": "hundredPercentStackedBarChart",
+      "Role": "Category",
+      "DisplayName": "Age Group",
+      "QueryRef": "HC_Patients.Age_Group",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Patients"
+            }
+          },
+          "Property": "Age Group"
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "2f23c44a3847d676c85c",
+      "Type": "hundredPercentStackedBarChart",
+      "Role": "Y",
+      "DisplayName": "Male Patients",
+      "QueryRef": "HC_Patients.Male Patients",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Patients"
+            }
+          },
+          "Property": "Male Patients"
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "2f23c44a3847d676c85c",
+      "Type": "hundredPercentStackedBarChart",
+      "Role": "Y",
+      "DisplayName": "Female Patients",
+      "QueryRef": "HC_Patients.Female Patients",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Patients"
+            }
+          },
+          "Property": "Female Patients"
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "545c8ad41391919b5c36",
+      "Type": "listSlicer",
+      "Role": "Values",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Hospital_Facilities.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "5907bfd8331055a9f684",
+      "Type": "barChart",
+      "Role": "Category",
+      "DisplayName": "ChronicCondition",
+      "QueryRef": "HC_Patients.ChronicCondition",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Patients"
+            }
+          },
+          "Property": "ChronicCondition"
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "5907bfd8331055a9f684",
+      "Type": "barChart",
+      "Role": "Y",
+      "DisplayName": "Count of Patient",
+      "QueryRef": "CountNonNull(HC_Patients.PatientID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Patients"
+                }
+              },
+              "Property": "PatientID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "9866d22e021c5e38d73d",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "DepartmentName",
+      "QueryRef": "HC_Hospital_Facilities.DepartmentName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "DepartmentName"
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "9866d22e021c5e38d73d",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Hospital_Facilities.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "ac342ae59a74a2d2523c",
+      "Type": "columnChart",
+      "Role": "Category",
+      "DisplayName": "Gender",
+      "QueryRef": "HC_Patients.Gender",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Patients"
+            }
+          },
+          "Property": "Gender"
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "ac342ae59a74a2d2523c",
+      "Type": "columnChart",
+      "Role": "Series",
+      "DisplayName": "Gender",
+      "QueryRef": "HC_Patients.Gender",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Patients"
+            }
+          },
+          "Property": "Gender"
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "ac342ae59a74a2d2523c",
+      "Type": "columnChart",
+      "Role": "Y",
+      "DisplayName": "Count of Patients",
+      "QueryRef": "Count(HC_Patients.PatientID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Patients"
+                }
+              },
+              "Property": "PatientID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "c4d351b8834fac12f72e",
+      "Type": "filledMap",
+      "Role": "Category",
+      "DisplayName": "ProvinceName",
+      "QueryRef": "Geographical_Location.ProvinceName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Geographical_Location"
+            }
+          },
+          "Property": "ProvinceName"
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "e20729305b0f151abd76",
+      "Type": "listSlicer",
+      "Role": "Values",
+      "DisplayName": "DepartmentName",
+      "QueryRef": "HC_Hospital_Facilities.DepartmentName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "DepartmentName"
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "fe0fe58c8c1814df945f",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "ProvinceName",
+      "QueryRef": "Geographical_Location.ProvinceName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Geographical_Location"
+            }
+          },
+          "Property": "ProvinceName"
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "fe2b2974d19467791cfe",
+      "Type": "pieChart",
+      "Role": "Category",
+      "DisplayName": "Provider",
+      "QueryRef": "HC_Insurance_Claims.Provider",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Insurance_Claims"
+            }
+          },
+          "Property": "Provider"
+        }
+      }
+    },
+    {
+      "Page": "Patient Analytics",
+      "Visual": "fe2b2974d19467791cfe",
+      "Type": "pieChart",
+      "Role": "Y",
+      "DisplayName": "Count of insurance claims",
+      "QueryRef": "CountNonNull(HC_Insurance_Claims.ClaimID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Insurance_Claims"
+                }
+              },
+              "Property": "ClaimID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visual": "789f2951d7842601cae0",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "DepartmentName",
+      "QueryRef": "HC_Hospital_Facilities.DepartmentName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "DepartmentName"
+        }
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visual": "789f2951d7842601cae0",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Hospital_Facilities.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visual": "8d4b88f76757330f7bd7",
+      "Type": "pivotTable",
+      "Role": "Rows",
+      "DisplayName": "ReferredFacilityID",
+      "QueryRef": "HC_Referrals.ReferredFacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Referrals"
+            }
+          },
+          "Property": "ReferredFacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visual": "8d4b88f76757330f7bd7",
+      "Type": "pivotTable",
+      "Role": "Values",
+      "DisplayName": "referrral_counts",
+      "QueryRef": "Min(HC_Referrals.AppointmentID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Referrals"
+                }
+              },
+              "Property": "AppointmentID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visual": "8da0749a2f8ddfdeaeb8",
+      "Type": "barChart",
+      "Role": "Category",
+      "DisplayName": "Diagnosis",
+      "QueryRef": "HC_Diagnoses.Diagnosis",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Diagnoses"
+            }
+          },
+          "Property": "Diagnosis"
+        }
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visual": "8da0749a2f8ddfdeaeb8",
+      "Type": "barChart",
+      "Role": "Y",
+      "DisplayName": "diagnosis count",
+      "QueryRef": "CountNonNull(HC_Diagnoses.DiagnosisID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Diagnoses"
+                }
+              },
+              "Property": "DiagnosisID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visual": "97a0532a1ff2056cabbc",
+      "Type": "barChart",
+      "Role": "Category",
+      "DisplayName": "Medication",
+      "QueryRef": "HC_Prescripitions.Medication",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Prescripitions"
+            }
+          },
+          "Property": "Medication"
+        }
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visual": "97a0532a1ff2056cabbc",
+      "Type": "barChart",
+      "Role": "Y",
+      "DisplayName": "Prescription_count",
+      "QueryRef": "CountNonNull(HC_Prescripitions.PrescriptionID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Prescripitions"
+                }
+              },
+              "Property": "PrescriptionID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visual": "97ddc0ec4ae19b16267a",
+      "Type": "listSlicer",
+      "Role": "Values",
+      "DisplayName": "DepartmentName",
+      "QueryRef": "HC_Hospital_Facilities.DepartmentName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "DepartmentName"
+        }
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visual": "b465b4acfce0c7fec8cc",
+      "Type": "listSlicer",
+      "Role": "Values",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Hospital_Facilities.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visual": "ce593f21e51cb4b93307",
+      "Type": "barChart",
+      "Role": "Category",
+      "DisplayName": "Test",
+      "QueryRef": "HC_Laboratory_Tests.Test",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Laboratory_Tests"
+            }
+          },
+          "Property": "Test"
+        }
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visual": "ce593f21e51cb4b93307",
+      "Type": "barChart",
+      "Role": "Y",
+      "DisplayName": "test_counts",
+      "QueryRef": "CountNonNull(HC_Laboratory_Tests.AppointmentID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Laboratory_Tests"
+                }
+              },
+              "Property": "AppointmentID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Clinical Analytics",
+      "Visual": "ed6c99602e5e398c6a52",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "ProvinceName",
+      "QueryRef": "Geographical_Location.ProvinceName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Geographical_Location"
+            }
+          },
+          "Property": "ProvinceName"
+        }
+      }
+    },
+    {
+      "Page": "Financial Dashboard",
+      "Visual": "10ab9e589cdf86825a92",
+      "Type": "listSlicer",
+      "Role": "Values",
+      "DisplayName": "DepartmentName",
+      "QueryRef": "HC_Hospital_Facilities.DepartmentName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "DepartmentName"
+        }
+      }
+    },
+    {
+      "Page": "Financial Dashboard",
+      "Visual": "1660fc59bbc4ca145ce3",
+      "Type": "lineChart",
+      "Role": "Category",
+      "DisplayName": "Month Month",
+      "QueryRef": "HC_Revenue_Summary.Month.Variation.Date Hierarchy.Month",
+      "Field": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Revenue_Summary"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "Month"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Month"
+        }
+      }
+    },
+    {
+      "Page": "Financial Dashboard",
+      "Visual": "1660fc59bbc4ca145ce3",
+      "Type": "lineChart",
+      "Role": "Y",
+      "DisplayName": "Total Revenue",
+      "QueryRef": "Sum(HC_Revenue_Summary.Revenue)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Revenue_Summary"
+                }
+              },
+              "Property": "Revenue"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "Page": "Financial Dashboard",
+      "Visual": "417905a9a1e78dd8364a",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "DepartmentID",
+      "QueryRef": "HC_Hospital_Facilities.DepartmentID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "DepartmentID"
+        }
+      }
+    },
+    {
+      "Page": "Financial Dashboard",
+      "Visual": "417905a9a1e78dd8364a",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "Total Revenue",
+      "QueryRef": "Sum(HC_Payments.AmountPaid)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Payments"
+                }
+              },
+              "Property": "AmountPaid"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "Page": "Financial Dashboard",
+      "Visual": "8b154be726457035bdfd",
+      "Type": "listSlicer",
+      "Role": "Values",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Hospital_Facilities.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Financial Dashboard",
+      "Visual": "d5d394be34e51702a553",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "DepartmentName",
+      "QueryRef": "HC_Hospital_Facilities.DepartmentName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "DepartmentName"
+        }
+      }
+    },
+    {
+      "Page": "Financial Dashboard",
+      "Visual": "d5d394be34e51702a553",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Hospital_Facilities.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Financial Dashboard",
+      "Visual": "e4fe70e7980197ffb338",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Hospital_Facilities.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Financial Dashboard",
+      "Visual": "e4fe70e7980197ffb338",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "Total Revenue",
+      "QueryRef": "Sum(HC_Payments.AmountPaid)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Payments"
+                }
+              },
+              "Property": "AmountPaid"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "Page": "Financial Dashboard",
+      "Visual": "f856217e029b63f70a7f",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "ProvinceName",
+      "QueryRef": "Geographical_Location.ProvinceName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Geographical_Location"
+            }
+          },
+          "Property": "ProvinceName"
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "3214ab6dc2e62526089d",
+      "Type": "pivotTable",
+      "Role": "Rows",
+      "DisplayName": "Specialty",
+      "QueryRef": "Medical_Staffs.Specialty",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Medical_Staffs"
+            }
+          },
+          "Property": "Specialty"
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "3214ab6dc2e62526089d",
+      "Type": "pivotTable",
+      "Role": "Values",
+      "DisplayName": "Department count",
+      "QueryRef": "Min(Medical_Staffs.DepartmentID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Medical_Staffs"
+                }
+              },
+              "Property": "DepartmentID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "3214ab6dc2e62526089d",
+      "Type": "pivotTable",
+      "Role": "Values",
+      "DisplayName": "Facility Count",
+      "QueryRef": "Min(Medical_Staffs.FacilityID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Medical_Staffs"
+                }
+              },
+              "Property": "FacilityID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "333a0709d977476823eb",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Appointments.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Appointments"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "333a0709d977476823eb",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "Patients treated",
+      "QueryRef": "CountNonNull(HC_Appointments.PatientID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Appointments"
+                }
+              },
+              "Property": "PatientID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "567476e4789ab8a509af",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "DepartmentName",
+      "QueryRef": "HC_Hospital_Facilities.DepartmentName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "DepartmentName"
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "567476e4789ab8a509af",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Hospital_Facilities.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "6a537d3fd9a03934383c",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "ProvinceName",
+      "QueryRef": "Geographical_Location.ProvinceName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Geographical_Location"
+            }
+          },
+          "Property": "ProvinceName"
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "7b86fb47006b540fe845",
+      "Type": "listSlicer",
+      "Role": "Values",
+      "DisplayName": "DepartmentName",
+      "QueryRef": "HC_Hospital_Facilities.DepartmentName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "DepartmentName"
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "951ba0fe8be557e9bd18",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "DepartmentID",
+      "QueryRef": "HC_Appointments.DepartmentID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Appointments"
+            }
+          },
+          "Property": "DepartmentID"
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "951ba0fe8be557e9bd18",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "number of appointments",
+      "QueryRef": "CountNonNull(HC_Appointments.AppointmentID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Appointments"
+                }
+              },
+              "Property": "AppointmentID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "ae9587bee6ed04df500f",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Total Equipment",
+      "QueryRef": "Min(HC_Hospital_Facilities.EquipmentID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Hospital_Facilities"
+                }
+              },
+              "Property": "EquipmentID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "ae9587bee6ed04df500f",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Total Beds",
+      "QueryRef": "Min(HC_Hospital_Facilities.BedID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Hospital_Facilities"
+                }
+              },
+              "Property": "BedID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Operational Dashboard",
+      "Visual": "d7cba4ba6e3b723df57d",
+      "Type": "listSlicer",
+      "Role": "Values",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Hospital_Facilities.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "08515f36a1a4eae4c9c9",
+      "Type": "pieChart",
+      "Role": "Category",
+      "DisplayName": "Comment",
+      "QueryRef": "HC_Patient_Feedback.Comment",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Patient_Feedback"
+            }
+          },
+          "Property": "Comment"
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "08515f36a1a4eae4c9c9",
+      "Type": "pieChart",
+      "Role": "Y",
+      "DisplayName": "Comment distribution",
+      "QueryRef": "CountNonNull(HC_Patient_Feedback.Comment)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Patient_Feedback"
+                }
+              },
+              "Property": "Comment"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "094c3b37bf75993db440",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Hospital_Facilities.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "094c3b37bf75993db440",
+      "Type": "clusteredBarChart",
+      "Role": "Tooltips",
+      "DisplayName": "Hospital Rank",
+      "QueryRef": "HC_Appointments.Hospital Rank",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Appointments"
+            }
+          },
+          "Property": "Hospital Rank"
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "094c3b37bf75993db440",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "Total Patients",
+      "QueryRef": "HC_Appointments.Total Patients",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Appointments"
+            }
+          },
+          "Property": "Total Patients"
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "58de2bb6e0fcdc7f5b10",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "DepartmentName",
+      "QueryRef": "HC_Hospital_Facilities.DepartmentName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "DepartmentName"
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "58de2bb6e0fcdc7f5b10",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Hospital_Facilities.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "5c41a821e353475bc0de",
+      "Type": "listSlicer",
+      "Role": "Values",
+      "DisplayName": "FacilityID",
+      "QueryRef": "HC_Hospital_Facilities.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "803de81b88d76eef8769",
+      "Type": "slicer",
+      "Role": "Values",
+      "DisplayName": "ProvinceName",
+      "QueryRef": "Geographical_Location.ProvinceName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Geographical_Location"
+            }
+          },
+          "Property": "ProvinceName"
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "b2e831a5f7515448accf",
+      "Type": "listSlicer",
+      "Role": "Values",
+      "DisplayName": "DepartmentName",
+      "QueryRef": "HC_Hospital_Facilities.DepartmentName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "DepartmentName"
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "c94c9822d2a8c80e9cac",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "Rating levels",
+      "QueryRef": "HC_Patient_Feedback.Comment",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Patient_Feedback"
+            }
+          },
+          "Property": "Comment"
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "c94c9822d2a8c80e9cac",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "Count of FeedbackID1",
+      "QueryRef": "CountNonNull(HC_Patient_Feedback.FeedbackID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Patient_Feedback"
+                }
+              },
+              "Property": "FeedbackID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "e5b59b8d534138732b2e",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Satisfaction Rating",
+      "QueryRef": "Sum(HC_Patient_Feedback.Rating)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Patient_Feedback"
+                }
+              },
+              "Property": "Rating"
+            }
+          },
+          "Function": 1
+        }
+      }
+    },
+    {
+      "Page": "Patient Experience Dashboard",
+      "Visual": "e5b59b8d534138732b2e",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Star Rating",
+      "QueryRef": "HC_Patient_Feedback.Average of Rating star rating",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Patient_Feedback"
+            }
+          },
+          "Property": "Average of Rating star rating"
+        }
+      }
+    },
+    {
+      "Page": "Patients KPIS",
+      "Visual": "2fedaff222ce5970c003",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "BloodGroup",
+      "QueryRef": "HC_Patients.BloodGroup",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Patients"
+            }
+          },
+          "Property": "BloodGroup"
+        }
+      }
+    },
+    {
+      "Page": "Patients KPIS",
+      "Visual": "2fedaff222ce5970c003",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "No_of_Patients",
+      "QueryRef": "CountNonNull(HC_Patients.PatientID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Patients"
+                }
+              },
+              "Property": "PatientID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Patients KPIS",
+      "Visual": "38f07f8b382a62d67837",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Average Age",
+      "QueryRef": "Sum(HC_Patients.Age)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Patients"
+                }
+              },
+              "Property": "Age"
+            }
+          },
+          "Function": 1
+        }
+      }
+    },
+    {
+      "Page": "Patients KPIS",
+      "Visual": "38f07f8b382a62d67837",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Insurance Coverage Rate",
+      "QueryRef": "HC_Patients.Insurance Coverage Rate",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Patients"
+            }
+          },
+          "Property": "Insurance Coverage Rate"
+        }
+      }
+    },
+    {
+      "Page": "Patients KPIS",
+      "Visual": "59032f4552393919b865",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "ProvinceName",
+      "QueryRef": "Geographical_Location.ProvinceName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Geographical_Location"
+            }
+          },
+          "Property": "ProvinceName"
+        }
+      }
+    },
+    {
+      "Page": "Patients KPIS",
+      "Visual": "59032f4552393919b865",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "Count of PatientID1",
+      "QueryRef": "CountNonNull(HC_Appointments.PatientID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Appointments"
+                }
+              },
+              "Property": "PatientID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Patients KPIS",
+      "Visual": "64c693537098c7044ab6",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Registered patients",
+      "QueryRef": "Min(HC_Patients.PatientID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Patients"
+                }
+              },
+              "Property": "PatientID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Patients KPIS",
+      "Visual": "64c693537098c7044ab6",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Active Patients",
+      "QueryRef": "Min(HC_Appointments.PatientID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Appointments"
+                }
+              },
+              "Property": "PatientID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Appointment KPIS",
+      "Visual": "3e268735a4b1ee946340",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "VisitType",
+      "QueryRef": "HC_Appointments.VisitType",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Appointments"
+            }
+          },
+          "Property": "VisitType"
+        }
+      }
+    },
+    {
+      "Page": "Appointment KPIS",
+      "Visual": "3e268735a4b1ee946340",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "Total Appointments",
+      "QueryRef": "CountNonNull(HC_Appointments.AppointmentID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Appointments"
+                }
+              },
+              "Property": "AppointmentID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Appointment KPIS",
+      "Visual": "baf8611d5c20b29de20b",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Total_Appointments",
+      "QueryRef": "Min(HC_Appointments.AppointmentID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Appointments"
+                }
+              },
+              "Property": "AppointmentID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Appointment KPIS",
+      "Visual": "baf8611d5c20b29de20b",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Average Appointments per Doctor",
+      "QueryRef": "HC_Appointments.Average Appointments per Doctor",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Appointments"
+            }
+          },
+          "Property": "Average Appointments per Doctor"
+        }
+      }
+    },
+    {
+      "Page": "Appointment KPIS",
+      "Visual": "fae7c8c8448d804077ed",
+      "Type": "lineChart",
+      "Role": "Category",
+      "DisplayName": "Date Month",
+      "QueryRef": "HC_Appointments.Date.Variation.Date Hierarchy.Month",
+      "Field": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Appointments"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "Date"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Month"
+        }
+      }
+    },
+    {
+      "Page": "Appointment KPIS",
+      "Visual": "fae7c8c8448d804077ed",
+      "Type": "lineChart",
+      "Role": "Category",
+      "DisplayName": "Date Day",
+      "QueryRef": "HC_Appointments.Date.Variation.Date Hierarchy.Day",
+      "Field": {
+        "HierarchyLevel": {
+          "Expression": {
+            "Hierarchy": {
+              "Expression": {
+                "PropertyVariationSource": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Appointments"
+                    }
+                  },
+                  "Name": "Variation",
+                  "Property": "Date"
+                }
+              },
+              "Hierarchy": "Date Hierarchy"
+            }
+          },
+          "Level": "Day"
+        }
+      }
+    },
+    {
+      "Page": "Appointment KPIS",
+      "Visual": "fae7c8c8448d804077ed",
+      "Type": "lineChart",
+      "Role": "Y",
+      "DisplayName": "Total_Appointments",
+      "QueryRef": "CountNonNull(HC_Appointments.AppointmentID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Appointments"
+                }
+              },
+              "Property": "AppointmentID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Clinical KPIS",
+      "Visual": "762523153754cd2c4880",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "Medication",
+      "QueryRef": "Fact_Prescripitions.Medication",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Prescripitions"
+            }
+          },
+          "Property": "Medication"
+        }
+      }
+    },
+    {
+      "Page": "Clinical KPIS",
+      "Visual": "762523153754cd2c4880",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "Prescription_count",
+      "QueryRef": "CountNonNull(Fact_Prescripitions.PrescriptionID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Prescripitions"
+                }
+              },
+              "Property": "PrescriptionID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Clinical KPIS",
+      "Visual": "8a405be401c8811e498c",
+      "Type": "pivotTable",
+      "Role": "Columns",
+      "DisplayName": "Severity",
+      "QueryRef": "Fact_Diagnoses.Severity",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Diagnoses"
+            }
+          },
+          "Property": "Severity"
+        }
+      }
+    },
+    {
+      "Page": "Clinical KPIS",
+      "Visual": "8a405be401c8811e498c",
+      "Type": "pivotTable",
+      "Role": "Rows",
+      "DisplayName": "Diagnosis",
+      "QueryRef": "Fact_Diagnoses.Diagnosis",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Diagnoses"
+            }
+          },
+          "Property": "Diagnosis"
+        }
+      }
+    },
+    {
+      "Page": "Clinical KPIS",
+      "Visual": "8a405be401c8811e498c",
+      "Type": "pivotTable",
+      "Role": "Values",
+      "DisplayName": "Total Cases",
+      "QueryRef": "Min(Fact_Diagnoses.DiagnosisID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Diagnoses"
+                }
+              },
+              "Property": "DiagnosisID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Clinical KPIS",
+      "Visual": "b4ebaf3e491995a23909",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Admission Rate",
+      "QueryRef": "Fact_Admissions.Admission Rate",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Admissions"
+            }
+          },
+          "Property": "Admission Rate"
+        }
+      }
+    },
+    {
+      "Page": "Clinical KPIS",
+      "Visual": "b4ebaf3e491995a23909",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Laboratory test volume",
+      "QueryRef": "Min(Fact_Laboratory_Tests.LabID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Laboratory_Tests"
+                }
+              },
+              "Property": "LabID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Clinical KPIS",
+      "Visual": "b4ebaf3e491995a23909",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Prescription volume",
+      "QueryRef": "Min(Fact_Prescripitions.PrescriptionID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Prescripitions"
+                }
+              },
+              "Property": "PrescriptionID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Clinical KPIS",
+      "Visual": "b4ebaf3e491995a23909",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Average Length Of StayDays",
+      "QueryRef": "Sum(Fact_Admissions.LengthOfStayDays)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Admissions"
+                }
+              },
+              "Property": "LengthOfStayDays"
+            }
+          },
+          "Function": 1
+        }
+      }
+    },
+    {
+      "Page": "Healthcare Staff IDS",
+      "Visual": "5bff74edb264327115ab",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Doctors",
+      "QueryRef": "Dim_Medical_Staffs.Doctors",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Medical_Staffs"
+            }
+          },
+          "Property": "Doctors"
+        }
+      }
+    },
+    {
+      "Page": "Healthcare Staff IDS",
+      "Visual": "5bff74edb264327115ab",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Nurses",
+      "QueryRef": "Dim_Medical_Staffs.Nurses",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Medical_Staffs"
+            }
+          },
+          "Property": "Nurses"
+        }
+      }
+    },
+    {
+      "Page": "Healthcare Staff IDS",
+      "Visual": "5bff74edb264327115ab",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Pharmacists",
+      "QueryRef": "Dim_Medical_Staffs.Pharmacists",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Medical_Staffs"
+            }
+          },
+          "Property": "Pharmacists"
+        }
+      }
+    },
+    {
+      "Page": "Healthcare Staff IDS",
+      "Visual": "5bff74edb264327115ab",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Lab_Scientist",
+      "QueryRef": "Dim_Medical_Staffs.Lab_Scientist",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Medical_Staffs"
+            }
+          },
+          "Property": "Lab_Scientist"
+        }
+      }
+    },
+    {
+      "Page": "Healthcare Staff IDS",
+      "Visual": "5bff74edb264327115ab",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Radiographers",
+      "QueryRef": "Dim_Medical_Staffs.Radiographers",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Medical_Staffs"
+            }
+          },
+          "Property": "Radiographers"
+        }
+      }
+    },
+    {
+      "Page": "Healthcare Staff IDS",
+      "Visual": "5bff74edb264327115ab",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Average Yrs Experience",
+      "QueryRef": "Sum(Dim_Medical_Staffs.YearsExperience)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Medical_Staffs"
+                }
+              },
+              "Property": "YearsExperience"
+            }
+          },
+          "Function": 1
+        }
+      }
+    },
+    {
+      "Page": "Healthcare Staff IDS",
+      "Visual": "6bb11d926c20248b0318",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "FacilityID",
+      "QueryRef": "Dim_Facility.FacilityID",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Facility"
+            }
+          },
+          "Property": "FacilityID"
+        }
+      }
+    },
+    {
+      "Page": "Healthcare Staff IDS",
+      "Visual": "6bb11d926c20248b0318",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "Total staffs",
+      "QueryRef": "CountNonNull(Dim_Medical_Staffs.StaffID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Medical_Staffs"
+                }
+              },
+              "Property": "StaffID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Healthcare Staff IDS",
+      "Visual": "e2822368b346d0707c10",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "DepartmentName",
+      "QueryRef": "Dim_Department.DepartmentName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Department"
+            }
+          },
+          "Property": "DepartmentName"
+        }
+      }
+    },
+    {
+      "Page": "Healthcare Staff IDS",
+      "Visual": "e2822368b346d0707c10",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "Total staffs",
+      "QueryRef": "CountNonNull(Dim_Medical_Staffs.StaffID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Medical_Staffs"
+                }
+              },
+              "Property": "StaffID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Operational KPIS",
+      "Visual": "6544b48000e180475d1a",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Facilities",
+      "QueryRef": "Min(Dim_Hospital_Facilities.FacilityID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Hospital_Facilities"
+                }
+              },
+              "Property": "FacilityID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Operational KPIS",
+      "Visual": "6544b48000e180475d1a",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": " Departments",
+      "QueryRef": "Min(Dim_Hospital_Facilities.DepartmentID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Hospital_Facilities"
+                }
+              },
+              "Property": "DepartmentID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Operational KPIS",
+      "Visual": "6544b48000e180475d1a",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Beds Capacity",
+      "QueryRef": "Min(Dim_Hospital_Facilities.BedID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Hospital_Facilities"
+                }
+              },
+              "Property": "BedID"
+            }
+          },
+          "Function": 2
+        }
+      }
+    },
+    {
+      "Page": "Operational KPIS",
+      "Visual": "6544b48000e180475d1a",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Rooms ",
+      "QueryRef": "Min(Dim_Hospital_Facilities.RoomID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Hospital_Facilities"
+                }
+              },
+              "Property": "RoomID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Operational KPIS",
+      "Visual": "d9cc39eebe73cec2e1de",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "EquipmentName",
+      "QueryRef": "Dim_Hospital_Facilities.EquipmentName",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Dim_Hospital_Facilities"
+            }
+          },
+          "Property": "EquipmentName"
+        }
+      }
+    },
+    {
+      "Page": "Operational KPIS",
+      "Visual": "d9cc39eebe73cec2e1de",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "Number of Equipments",
+      "QueryRef": "CountNonNull(Dim_Hospital_Facilities.EquipmentID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Dim_Hospital_Facilities"
+                }
+              },
+              "Property": "EquipmentID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    },
+    {
+      "Page": "Financial KPIS",
+      "Visual": "28e20b7d021ebda9b355",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Total Revenue",
+      "QueryRef": "Sum(Fact_Revenue_Summary.Revenue)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Revenue_Summary"
+                }
+              },
+              "Property": "Revenue"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "Page": "Financial KPIS",
+      "Visual": "28e20b7d021ebda9b355",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Outstanding Bills",
+      "QueryRef": "Fact_Revenue_Summary.Outstanding Bills",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Revenue_Summary"
+            }
+          },
+          "Property": "Outstanding Bills"
+        }
+      }
+    },
+    {
+      "Page": "Financial KPIS",
+      "Visual": "28e20b7d021ebda9b355",
+      "Type": "cardVisual",
+      "Role": "Data",
+      "DisplayName": "Insurance Claim Approval Rate",
+      "QueryRef": "Fact_Revenue_Summary.Insurance Claim Approval Rate",
+      "Field": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Revenue_Summary"
+            }
+          },
+          "Property": "Insurance Claim Approval Rate"
+        }
+      }
+    },
+    {
+      "Page": "Financial KPIS",
+      "Visual": "4821a7861e60c0e2b809",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "Provider",
+      "QueryRef": "Fact_Insurance_Claims.Provider",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Insurance_Claims"
+            }
+          },
+          "Property": "Provider"
+        }
+      }
+    },
+    {
+      "Page": "Financial KPIS",
+      "Visual": "4821a7861e60c0e2b809",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": " AmountPaid",
+      "QueryRef": "Sum(Fact_Payments.AmountPaid)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Payments"
+                }
+              },
+              "Property": "AmountPaid"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "Page": "Financial KPIS",
+      "Visual": "ae724cc628058b914700",
+      "Type": "clusteredBarChart",
+      "Role": "Category",
+      "DisplayName": "Method",
+      "QueryRef": "Fact_Payments.Method",
+      "Field": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact_Payments"
+            }
+          },
+          "Property": "Method"
+        }
+      }
+    },
+    {
+      "Page": "Financial KPIS",
+      "Visual": "ae724cc628058b914700",
+      "Type": "clusteredBarChart",
+      "Role": "Y",
+      "DisplayName": "Total Payments",
+      "QueryRef": "CountNonNull(Fact_Payments.PaymentID)",
+      "Field": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Fact_Payments"
+                }
+              },
+              "Property": "PaymentID"
+            }
+          },
+          "Function": 5
+        }
+      }
+    }
+  ],
+  "evidence_basis": "Static inspection of the supplied report archive only. KPI and chart acceptability recorded from reviewer confirmation. Native rendering, DAX evaluation and slicer runtime were not executed."
+}

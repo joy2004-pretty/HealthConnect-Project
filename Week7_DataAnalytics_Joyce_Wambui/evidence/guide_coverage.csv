@@ -1,0 +1,19 @@
+Activity,Guide activity,Status,Evidence
+1,Review Week 6 outputs,Covered,Six supplied artifacts reviewed
+2,Prioritize analytical tests,Covered,T01 to T15 define scope and evidence
+3,Validate KPI calculations,Covered in scope,101 original SELECTs and source controls
+4,Compare dashboard and data,Covered in scope,Static metric bindings and reviewer confirmation
+5,Test filters and calculations,Covered in scope,Source segments checked; configured slicers inspected; runtime scope stated
+6,Investigate inconsistent outputs,Covered,"Join multiplication, linked totals and metric labels"
+7,Validate important findings,Covered,"Patient, clinical, financial and capacity controls"
+8,Reassess attendance and no shows,Not assessable,No attendance outcome in the source
+9,Check relevant segments,Covered in scope,Gender and chronic-condition source segments
+10,Identify analytical weaknesses,Covered,Issue log I01 to I10
+11,Refine unclear visualizations,Covered in scope,Metric descriptions clarified; visual quality accepted from reviewer
+12,Improve usability and interpretation,Covered in scope,"Existing navigation, slicers and detail pages inventoried"
+13,Reassess recommendations,Covered,Recommendations reflect tested coverage and definitions
+14,Identify findings for the wider solution,Covered,Key and date requirements documented
+15,Share validated findings across tracks,Not completed,No actual shared validation or evidence supplied
+16,Document changes,Covered,Originals preserved; refinement SQL and issue log
+17,Retest important refinements,Covered in scope,14 targeted retests passed
+18,Document limitations,Covered,"Report, summary and testing record"

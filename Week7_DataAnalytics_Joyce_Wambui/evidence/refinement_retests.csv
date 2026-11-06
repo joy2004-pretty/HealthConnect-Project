@@ -1,0 +1,15 @@
+TestID,Description,Expected,Actual,Outcome,EvidenceBasis
+RT01,Department-name conflicts,0,0,Pass,Controlled prepared-table reconstruction
+RT02,All laboratory tests retained,5000,5000.0,Pass,Source CSV plus refined query
+RT03,Department appointment workload without bed duplication,5000,5000.0,Pass,Controlled prepared-table reconstruction
+RT04,All four clinical-event populations retained,20000,20000.0,Pass,Four source CSVs plus refined query
+RT05,Facility collections including Unknown,8389454556,8389454556.0,Pass,Payment source reconciliation
+RT06,Department collections including Unknown,8389454556,8389454556.0,Pass,Payment source reconciliation
+RT07,Appointment-cohort collections including Unknown,8389454556,8389454556.0,Pass,Payment source reconciliation; service-month proxy
+RT08,Department ranking retains full collections,8389454556,8389454556.0,Pass,Payment source reconciliation
+RT09,Numeric rating distribution covers all feedback,21064,21064.0,Pass,Feedback source reconciliation
+RT10,Distinct equipment distribution,200,200.0,Pass,Controlled prepared-table reconstruction and inventory source
+RT11,Registered patients per staff member,16,16.0,Pass,Patient and staff source counts
+RT12,Staff per 1000 registered patients,62.5,62.5,Pass,Patient and staff source counts
+RT13,Unknown facility payment amount,7694903236,7694903236,Pass,Explicit Unknown bucket
+RT14,Unknown department left unranked,True,True,Pass,Refined ranking result

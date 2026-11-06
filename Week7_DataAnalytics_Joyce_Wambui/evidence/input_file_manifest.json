@@ -1,0 +1,45 @@
+{
+  "review_date": "2026-11-02",
+  "files": [
+    {
+      "file": "Data Quality  AssessmentFindings.pdf",
+      "bytes": 145622,
+      "sha256": "a745f56f534322a2f31845aa7a5a16f0e8d99af9738985d4cfb3a45caf869a98",
+      "pages": 4,
+      "package_path": "week6_reference/Data_Quality_Assessment_Findings_Week6.pdf"
+    },
+    {
+      "file": "HealthConnect_Rwanda_Business_Insights_Report.pdf",
+      "bytes": 174716,
+      "sha256": "f9d3824c02e59e6dc2a7c438b0aef4ed2e2c736216a80b56d292b65e3f36e560",
+      "pages": 5,
+      "package_path": "week6_reference/Business_Insights_Report_Week6.pdf"
+    },
+    {
+      "file": "HealthConnect_Rwanda_Executive_Presentation.pptx",
+      "bytes": 390695,
+      "sha256": "3881ec94be33bf1e7cd1a5f2bcde0f9ce9b4dadcd8b924c48ec6493d247da0c0",
+      "slides": 12,
+      "package_path": "week6_reference/Executive_Presentation_Week6.pptx"
+    },
+    {
+      "file": "Key Perfromance Indicators(KPI).sql",
+      "bytes": 13518,
+      "sha256": "ddf026a42aa89e545db79efe2e5eb119e6c821599d680ed591f91f3fc1ffa260",
+      "package_path": "sql/original/Key_Performance_Indicators_Week6.sql"
+    },
+    {
+      "file": "PowerBI Dashboard.pbix(1).zip",
+      "bytes": 6866053,
+      "sha256": "64ce9f087eeeaf7888335c46dc8446eb2976349a89ed27064cf180d3a599d67f",
+      "package_path": "dashboards/HealthConnect_Rwanda_PowerBI_Dashboard.pbix"
+    },
+    {
+      "file": "SQL SCRIPT(1).sql",
+      "bytes": 9506,
+      "sha256": "bfc6298da986b4609988f935fb406e213a11e0ad39fb580bfa3b4bcc92754ae2",
+      "package_path": "sql/original/SQL_Analysis_Week6.sql"
+    }
+  ],
+  "originals_preserved": true
+}

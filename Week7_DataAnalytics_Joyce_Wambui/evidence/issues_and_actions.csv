@@ -1,0 +1,13 @@
+IssueID,Area,Before,Action,Status,Remaining limitation
+I01,Laboratory attribution,"Q26 retains only 2,272 linked tests","R02 retains 5,000 including 2,728 Unknown",Refined SQL retested,Source data gap remains
+I02,Department workload,"Bed-detail join produces 50,000 counts in the controlled reconstruction","R03 returns 5,000 appointment records",Refined SQL retested,Imported prepared-table state not certified
+I03,Collection attribution,"Linked facility/department totals cover 694,551,320","R05/R06/R09 retain all 8,389,454,556; Unknown unranked",Refined SQL retested,"Unattributed payments remain 7,694,903,236"
+I04,Date meaning,Q37 uses appointment dates for payment amounts,R07 names appointment cohorts and retains Unknown,Refined SQL retested,Payment-date analysis unavailable
+I05,Rating distribution,Original KPI returns mean Rating by Comment,"R10 gives numeric rating counts across 21,064 responses",Refined SQL retested,Feedback dates unavailable
+I06,Equipment grain,"COUNT EquipmentID totals 2,000 in the reconstructed bed table",R11 counts 200 distinct equipment IDs,Refined SQL retested,Utilization history absent
+I07,Ratio and provider labels,Ratio direction and provider remittance meaning are ambiguous,R12 names both workforce ratios; R13 states claim-linked bill payments,Definitions refined and calculations retested,Actual insurer remittances not established
+I08,Report consistency,"Quality PDF lists 4,709 referrals","Week 7 uses 4,708 source data rows",Corrected in Week 7 record,Week 6 originals preserved
+I09,Dashboard financial terminology,Executive card uses reported revenue while financial bars use payments,Week 7 metric dictionary distinguishes both values,Documented,PBIX title and measure definitions retained
+I10,Missing source attributes,"Parent links, effective dates, attendance outcomes and usage history are incomplete","Retain Unknown, qualify populations and state unavailable metrics",Documented limitation,Authoritative source improvements required
+I11,Cross-track validation,No actual cross-track test completed,Record actual not-completed status,Not completed,Actual activity and evidence remain absent
+I12,External publication,GitHub publication not yet undertaken,Prepare organized files and README,Not yet published,Drive access and official submission remain external actions

@@ -1,0 +1,681 @@
+{
+  "review_date": "2026-11-02",
+  "execution_environment": "Python stdlib sqlite3 in memory; not native MySQL or Power BI Desktop",
+  "scope": "Independent review of the six supplied files. SQL data logic runs against the project source CSVs available in this workspace. Dashboard quality and displayed KPI acceptability are supplied reviewer confirmations; static PBIX configuration is inspected separately.",
+  "modelled_prepared_tables": {
+    "geographical_location": "Village to sector to district to province left joins; one row per source VillageID.",
+    "hc_medical_staffs": "Six role sources appended; one Doctor copy.",
+    "hc_hospital_facilities": "Controlled reconstruction: beds left joined to rooms and department names, then equipment by DepartmentID. This models the join risk and does not certify the actual imported MySQL table."
+  },
+  "compatibility_mappings": [
+    "Known first-column BOM-mojibake aliases are supplied alongside normalized source headers.",
+    "MySQL MONTH, MONTHNAME, DATE_FORMAT and ROUND equivalents registered.",
+    "MySQL / decimal division is represented with a real operand in SQLite.",
+    "AS returning is renamed only in the SQLite compatibility copy.",
+    "healthcare_analytics schema qualifier is removed only in local execution."
+  ],
+  "source_files": {
+    "HC_Patients.csv": {
+      "sha256": "b517e71a72ff695c3c345d9c14a6f07e59b1e855cdf041621daf88e6e09271e5",
+      "rows": 20000,
+      "columns": [
+        "PatientID",
+        "FirstName",
+        "LastName",
+        "Gender",
+        "DateOfBirth",
+        "Age",
+        "MaritalStatus",
+        "Occupation",
+        "Education",
+        "VillageID",
+        "InsuranceID",
+        "BloodGroup",
+        "HeightCm",
+        "WeightKg",
+        "ChronicCondition",
+        "Phone",
+        "EmergencyContact",
+        "Status",
+        "BMI"
+      ]
+    },
+    "HC_Clinical_Transactions.xlsx - Appointments.csv": {
+      "sha256": "dd4b22034290454761f4b0b1eb839251f61500a1eca2c5f1b7a1495183587c5a",
+      "rows": 5000,
+      "columns": [
+        "AppointmentID",
+        "PatientID",
+        "DoctorID",
+        "FacilityID",
+        "DepartmentID",
+        "Date",
+        "VisitType"
+      ]
+    },
+    "HC_Clinical_Transactions.xlsx - Diagnoses.csv": {
+      "sha256": "7a9270a237c2631a20c04376a2ce979de497f384909b0ef45228442f56d1e22c",
+      "rows": 5000,
+      "columns": [
+        "DiagnosisID",
+        "AppointmentID",
+        "Diagnosis",
+        "Severity"
+      ]
+    },
+    "HC_Clinical_Transactions.xlsx - Laboratory_Tests.csv": {
+      "sha256": "0b36e229efb6c18572563df32b9d22cb2a4de87061302ad8e12c2e73b229bfed",
+      "rows": 5000,
+      "columns": [
+        "LabID",
+        "AppointmentID",
+        "Test",
+        "Result"
+      ]
+    },
+    "HC_Clinical_Transactions.xlsx - Prescriptions.csv": {
+      "sha256": "bb81b601f1d4e83cd9ee9eebee4e7bf921e5501f02fd316ce1f39a1f023bf9a4",
+      "rows": 5000,
+      "columns": [
+        "PrescriptionID",
+        "AppointmentID",
+        "Medication",
+        "Dosage"
+      ]
+    },
+    "HC_Clinical_Transactions.xlsx - Admissions.csv": {
+      "sha256": "e9bd997154d04cc023be4feb0f092fb7edf5ca1cd3048950df39e12812947f9e",
+      "rows": 5000,
+      "columns": [
+        "AdmissionID",
+        "AppointmentID",
+        "LengthOfStayDays"
+      ]
+    },
+    "HC_Clinical_Transactions.xlsx - Referrals.csv": {
+      "sha256": "547e02525734df3dfba95ea861393c1e86710a2a576d934db20f781d3202f819",
+      "rows": 4708,
+      "columns": [
+        "ReferralID",
+        "AppointmentID",
+        "ReferredFacilityID"
+      ]
+    },
+    "HC_Billing.csv": {
+      "sha256": "a1c1bad9977967b4475a7556f31925bf1e3954c0640439165bbef92b133a44fb",
+      "rows": 60000,
+      "columns": [
+        "BillingID",
+        "AppointmentID",
+        "Amount",
+        "Status"
+      ]
+    },
+    "HC_Payments.csv": {
+      "sha256": "476eece4e903c2e2acbe79ad76f4c93e5989bcd2596b9ccc72d9fb2ff241dddb",
+      "rows": 60000,
+      "columns": [
+        "PaymentID",
+        "BillingID",
+        "AmountPaid",
+        "Method"
+      ]
+    },
+    "Insurance_Claims.csv": {
+      "sha256": "953193fa29bf96cc786a5440775f6fe304e62b51edfc1b115775198a4e2d1e58",
+      "rows": 42036,
+      "columns": [
+        "ClaimID",
+        "BillingID",
+        "Provider",
+        "ClaimAmount",
+        "Status"
+      ]
+    },
+    "HC_Revenue_Summary.csv": {
+      "sha256": "1c107acece2f76c1ba9a89f9e893bcc421c0d851e9bd4114a60e1e5782dcd0f6",
+      "rows": 12,
+      "columns": [
+        "Month",
+        "Revenue",
+        "Appointments"
+      ]
+    },
+    "HC_Patient_Feedback.csv": {
+      "sha256": "85d955a4ba07bb0ef0a64c0d9451ea78376cae2b25a3afbcf2d84fae1acb568f",
+      "rows": 21064,
+      "columns": [
+        "FeedbackID",
+        "AppointmentID",
+        "Rating",
+        "Comment"
+      ]
+    },
+    "HC_Doctor.csv": {
+      "sha256": "680f7cdf207ff118488305a5033d462b069c66d74b24bd99ec304411c0836e11",
+      "rows": 350,
+      "columns": [
+        "StaffID",
+        "FirstName",
+        "LastName",
+        "Role",
+        "Department",
+        "Specialty",
+        "FacilityID",
+        "DepartmentID",
+        "YearsExperience",
+        "Status"
+      ]
+    },
+    "HC_Nurse.csv": {
+      "sha256": "1f644dacd08b63d532857b84fc833a9d35f1c0c0628c2f7341ab7fee05cd7459",
+      "rows": 700,
+      "columns": [
+        "StaffID",
+        "FirstName",
+        "LastName",
+        "Role",
+        "Department",
+        "Specialty",
+        "FacilityID",
+        "DepartmentID",
+        "YearsExperience",
+        "Status"
+      ]
+    },
+    "HC_Radiographer.csv": {
+      "sha256": "57d7284b96cba6121a3b3dbd8e6df047f38d99397aea545f2062c37cd3a2326c",
+      "rows": 30,
+      "columns": [
+        "StaffID",
+        "FirstName",
+        "LastName",
+        "Role",
+        "Department",
+        "Specialty",
+        "FacilityID",
+        "DepartmentID",
+        "YearsExperience",
+        "Status"
+      ]
+    },
+    "Laboratory_Scientist.csv": {
+      "sha256": "d9ffde2cc3409b8e4219aa781b5409e0457423ad8c5800306232488cb04dd1da",
+      "rows": 40,
+      "columns": [
+        "StaffID",
+        "FirstName",
+        "LastName",
+        "Role",
+        "Department",
+        "Specialty",
+        "FacilityID",
+        "DepartmentID",
+        "YearsExperience",
+        "Status"
+      ]
+    },
+    "Pharmacist.csv": {
+      "sha256": "44e893b20ddc2189c768a48f27906a4adf09d1cc73a5943b380372b35a41494f",
+      "rows": 50,
+      "columns": [
+        "StaffID",
+        "FirstName",
+        "LastName",
+        "Role",
+        "Department",
+        "Specialty",
+        "FacilityID",
+        "DepartmentID",
+        "YearsExperience",
+        "Status"
+      ]
+    },
+    "HC_Administrative_Staff.csv": {
+      "sha256": "d3fb68cef87a9f514f4e2faba4ccca98267e1c28c2f00ebd5e95513d5c6e279c",
+      "rows": 80,
+      "columns": [
+        "StaffID",
+        "FirstName",
+        "LastName",
+        "Role",
+        "Department",
+        "Specialty",
+        "FacilityID",
+        "DepartmentID",
+        "YearsExperience",
+        "Status"
+      ]
+    },
+    "HC_Villages.csv": {
+      "sha256": "b2f9f538f469715b5ed075d2ff0d25dd27a444dc71adfdaf8515dc6df3521782",
+      "rows": 480,
+      "columns": [
+        "VillageID",
+        "VillageName",
+        "SectorID"
+      ]
+    },
+    "HC_Sectors.csv": {
+      "sha256": "3bb98f5c7f88ebe2d6cbd88794734aa89675baa6770e85ac0dad5ed28210b7ab",
+      "rows": 120,
+      "columns": [
+        "SectorID",
+        "SectorName",
+        "DistrictID"
+      ]
+    },
+    "HC_Districts.csv": {
+      "sha256": "18cc052d8cf9de499b64648acc37c86006df22bb863314173e377c698a20dd55",
+      "rows": 30,
+      "columns": [
+        "DistrictID",
+        "DistrictName",
+        "ProvinceID"
+      ]
+    },
+    "HC_Provinces.csv": {
+      "sha256": "ac50b8c0dda7f3f49e216eb05c30d02d6ca3503fe02213686e177c56133e2e6d",
+      "rows": 5,
+      "columns": [
+        "ProvinceID",
+        "ProvinceName",
+        "CountryID"
+      ]
+    },
+    "HC_Facility_Master_Data.xlsx - Beds.csv": {
+      "sha256": "28a85a539bd8c783659d0e31142da23fc2163eb24c0a563692a5ce762f93dc29",
+      "rows": 2000,
+      "columns": [
+        "BedID",
+        "RoomID",
+        "Status"
+      ]
+    },
+    "HC_Facility_Master_Data.xlsx - Rooms.csv": {
+      "sha256": "444064693ab81a30f36b2bddc2216a65187f7c7bdbd364a5efd2e4f89f33b07c",
+      "rows": 400,
+      "columns": [
+        "RoomID",
+        "DepartmentID",
+        "FacilityID",
+        "RoomName"
+      ]
+    },
+    "HC_Facility_Master_Data.xlsx - Departments.csv": {
+      "sha256": "7b384ebf33153954c8cad9ad5058aa56e583853e9dc318c94b7faad1a90f1363",
+      "rows": 200,
+      "columns": [
+        "DepartmentID",
+        "DepartmentName",
+        "FacilityID"
+      ]
+    },
+    "HC_Facility_Master_Data.xlsx - Medical_Equipment.csv": {
+      "sha256": "56fa95d62be0ed4b0eb5b781294a234ab24698bac7db9af062b50b62370cd805",
+      "rows": 200,
+      "columns": [
+        "EquipmentID",
+        "EquipmentName",
+        "DepartmentID",
+        "FacilityID"
+      ]
+    }
+  },
+  "controls": {
+    "patients": 20000,
+    "appointments": 5000,
+    "patients_with_linked_appointments": 4443,
+    "patients_without_linked_appointments": 15557,
+    "doctors_in_appointments": 350,
+    "registered_doctors": 350,
+    "facilities_in_appointments": 20,
+    "staff": 1250,
+    "beds": 2000,
+    "occupied_beds": 0,
+    "equipment_inventory": 200,
+    "financial": {
+      "billed": 9309401961,
+      "collected": 8389454556,
+      "balance": 919947405,
+      "reported_revenue": 1132677500,
+      "claims": 4881863293.88,
+      "status_rule_differences": 39961
+    },
+    "feedback": {
+      "total": 21064,
+      "average": 2.99,
+      "poor_comments": 5283,
+      "linked": 1756,
+      "linked_average": 2.93
+    },
+    "staff_by_role": [
+      {
+        "Role": "Nurse",
+        "Staff": 700
+      },
+      {
+        "Role": "Doctor",
+        "Staff": 350
+      },
+      {
+        "Role": "Administrative Staff",
+        "Staff": 80
+      },
+      {
+        "Role": "Pharmacist",
+        "Staff": 50
+      },
+      {
+        "Role": "Laboratory Scientist",
+        "Staff": 40
+      },
+      {
+        "Role": "Radiographer",
+        "Staff": 30
+      }
+    ],
+    "gender": [
+      {
+        "Gender": "Female",
+        "Patients": 9910
+      },
+      {
+        "Gender": "Male",
+        "Patients": 10090
+      }
+    ],
+    "gender_chronic_segments": [
+      {
+        "Gender": "Female",
+        "ChronicCondition": "Asthma",
+        "Patients": 2473
+      },
+      {
+        "Gender": "Female",
+        "ChronicCondition": "Diabetes",
+        "Patients": 2454
+      },
+      {
+        "Gender": "Female",
+        "ChronicCondition": "Hypertension",
+        "Patients": 2456
+      },
+      {
+        "Gender": "Female",
+        "ChronicCondition": "None",
+        "Patients": 2527
+      },
+      {
+        "Gender": "Male",
+        "ChronicCondition": "Asthma",
+        "Patients": 2523
+      },
+      {
+        "Gender": "Male",
+        "ChronicCondition": "Diabetes",
+        "Patients": 2491
+      },
+      {
+        "Gender": "Male",
+        "ChronicCondition": "Hypertension",
+        "Patients": 2532
+      },
+      {
+        "Gender": "Male",
+        "ChronicCondition": "None",
+        "Patients": 2544
+      }
+    ],
+    "monthly_appointments": [
+      {
+        "MonthNumber": 1,
+        "Month": "January",
+        "Appointments": 418
+      },
+      {
+        "MonthNumber": 2,
+        "Month": "February",
+        "Appointments": 413
+      },
+      {
+        "MonthNumber": 3,
+        "Month": "March",
+        "Appointments": 440
+      },
+      {
+        "MonthNumber": 4,
+        "Month": "April",
+        "Appointments": 405
+      },
+      {
+        "MonthNumber": 5,
+        "Month": "May",
+        "Appointments": 400
+      },
+      {
+        "MonthNumber": 6,
+        "Month": "June",
+        "Appointments": 437
+      },
+      {
+        "MonthNumber": 7,
+        "Month": "July",
+        "Appointments": 416
+      },
+      {
+        "MonthNumber": 8,
+        "Month": "August",
+        "Appointments": 428
+      },
+      {
+        "MonthNumber": 9,
+        "Month": "September",
+        "Appointments": 408
+      },
+      {
+        "MonthNumber": 10,
+        "Month": "October",
+        "Appointments": 414
+      },
+      {
+        "MonthNumber": 11,
+        "Month": "November",
+        "Appointments": 420
+      },
+      {
+        "MonthNumber": 12,
+        "Month": "December",
+        "Appointments": 401
+      }
+    ],
+    "referrals": 4708,
+    "claims_unique_bills": 42036,
+    "claims_count": 42036,
+    "positive_balance_bills": 11887,
+    "known_linked_collections": 694551320,
+    "revenue_summary_appointment_count": 60809,
+    "lookup_name_conflicts": 0,
+    "reconstructed_facility_rows": 2000,
+    "reconstructed_distinct_equipment": 200,
+    "appointment_columns": [
+      "AppointmentID",
+      "PatientID",
+      "DoctorID",
+      "FacilityID",
+      "DepartmentID",
+      "Date",
+      "VisitType"
+    ],
+    "unattributed_collections": 7694903236,
+    "coverage": [
+      {
+        "Dataset": "hc_diagnoses",
+        "Total": 5000,
+        "Matched": 5000,
+        "Unmatched": 0
+      },
+      {
+        "Dataset": "hc_ laboratory_tests",
+        "Total": 5000,
+        "Matched": 2272,
+        "Unmatched": 2728
+      },
+      {
+        "Dataset": "hc_ prescriptions",
+        "Total": 5000,
+        "Matched": 4003,
+        "Unmatched": 997
+      },
+      {
+        "Dataset": "hc_admissions",
+        "Total": 5000,
+        "Matched": 586,
+        "Unmatched": 4414
+      },
+      {
+        "Dataset": "hc_referrals",
+        "Total": 4708,
+        "Matched": 415,
+        "Unmatched": 4293
+      },
+      {
+        "Dataset": "hc_patient_feedback",
+        "Total": 21064,
+        "Matched": 1756,
+        "Unmatched": 19308
+      },
+      {
+        "Dataset": "hc_billing",
+        "Total": 60000,
+        "Matched": 5000,
+        "Unmatched": 55000
+      }
+    ],
+    "master_conflicts": {
+      "staff": 1187,
+      "appointments": 4744
+    }
+  },
+  "execution_summary": {
+    "main_select_statements": 41,
+    "main_numbered_questions_implemented": 39,
+    "kpi_select_statements": 60,
+    "refined_select_statements": 13,
+    "errors": []
+  },
+  "retests": [
+    {
+      "TestID": "RT01",
+      "Description": "Department-name conflicts",
+      "Expected": 0,
+      "Actual": 0,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Controlled prepared-table reconstruction"
+    },
+    {
+      "TestID": "RT02",
+      "Description": "All laboratory tests retained",
+      "Expected": 5000,
+      "Actual": 5000.0,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Source CSV plus refined query"
+    },
+    {
+      "TestID": "RT03",
+      "Description": "Department appointment workload without bed duplication",
+      "Expected": 5000,
+      "Actual": 5000.0,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Controlled prepared-table reconstruction"
+    },
+    {
+      "TestID": "RT04",
+      "Description": "All four clinical-event populations retained",
+      "Expected": 20000,
+      "Actual": 20000.0,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Four source CSVs plus refined query"
+    },
+    {
+      "TestID": "RT05",
+      "Description": "Facility collections including Unknown",
+      "Expected": 8389454556,
+      "Actual": 8389454556.0,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Payment source reconciliation"
+    },
+    {
+      "TestID": "RT06",
+      "Description": "Department collections including Unknown",
+      "Expected": 8389454556,
+      "Actual": 8389454556.0,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Payment source reconciliation"
+    },
+    {
+      "TestID": "RT07",
+      "Description": "Appointment-cohort collections including Unknown",
+      "Expected": 8389454556,
+      "Actual": 8389454556.0,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Payment source reconciliation; service-month proxy"
+    },
+    {
+      "TestID": "RT08",
+      "Description": "Department ranking retains full collections",
+      "Expected": 8389454556,
+      "Actual": 8389454556.0,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Payment source reconciliation"
+    },
+    {
+      "TestID": "RT09",
+      "Description": "Numeric rating distribution covers all feedback",
+      "Expected": 21064,
+      "Actual": 21064.0,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Feedback source reconciliation"
+    },
+    {
+      "TestID": "RT10",
+      "Description": "Distinct equipment distribution",
+      "Expected": 200,
+      "Actual": 200.0,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Controlled prepared-table reconstruction and inventory source"
+    },
+    {
+      "TestID": "RT11",
+      "Description": "Registered patients per staff member",
+      "Expected": 16,
+      "Actual": 16.0,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Patient and staff source counts"
+    },
+    {
+      "TestID": "RT12",
+      "Description": "Staff per 1000 registered patients",
+      "Expected": 62.5,
+      "Actual": 62.5,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Patient and staff source counts"
+    },
+    {
+      "TestID": "RT13",
+      "Description": "Unknown facility payment amount",
+      "Expected": 7694903236,
+      "Actual": 7694903236,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Explicit Unknown bucket"
+    },
+    {
+      "TestID": "RT14",
+      "Description": "Unknown department left unranked",
+      "Expected": true,
+      "Actual": true,
+      "Outcome": "Pass",
+      "EvidenceBasis": "Refined ranking result"
+    }
+  ]
+}
