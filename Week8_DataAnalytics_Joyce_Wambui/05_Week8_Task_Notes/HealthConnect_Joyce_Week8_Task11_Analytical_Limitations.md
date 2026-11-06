@@ -1,0 +1,17 @@
+# HealthConnect Rwanda | Week 8 Task 11
+
+**Joyce · Data Analytics · Analytical limitations**
+
+The report describes what is recorded in the supplied files. Its strongest conclusions concern overall counts and totals. Attendance, trends without dated records, and facility comparisons require additional evidence.
+
+| Limitation | Effect on the analysis | How to report it |
+| --- | --- | --- |
+| **Attendance is unrecorded.** The appointment file contains 5,000 unique booking IDs and has no final visit outcome. The Revenue Summary reports 60,809 appointments as an aggregate, without booking IDs. | Neither source can establish a no-show rate. An ID missing from the appointment file does not show that a patient missed a visit. | Label the 5,000 **Recorded appointments**. Keep the summary total separate. Record attendance outcomes before comparing rates or assessing a reminder pilot. |
+| **Incomplete links limit facility comparisons.** Only 8.28% of payment value and 8.34% of feedback responses link to an appointment. The saved payment charts exclude blank facility or department groups. | Named groups describe the linked subset. They may differ from the pattern across all collections or responses. | Report the overall totals and the linked share. Keep unmatched records in overall figures and make the unattributed amounts visible when presenting breakdowns. |
+| **Some department and facility assignments disagree.** The Week 7 check found 4,744 appointment rows whose recorded Facility ID differs from the facility mapped to the Department ID in the department master. Joining directly to bed records also multiplied rows in a controlled test. | The discrepancy does not establish which assignment is correct. Department workload can also be inflated if the lookup repeats each department for every bed. | Preserve recorded IDs, use a lookup with one row per department where appropriate, check row counts after joins, and verify assignments before ranking departments or allocating staff. |
+| **Finance measures answer different questions.** The monthly Revenue Summary is separate from collected payments, and the available files do not establish when balances became overdue. | The billed-minus-collected balance does not measure loss, profitability or how long amounts have been outstanding. Monthly reported revenue cannot be broken down by facility from its source. | Label **reported revenue**, **collected payments** and **outstanding billing balance** separately. Use dated billing and payment records for aging and expense records for profitability. |
+| **Feedback and bed records lack the dates needed for trends.** Feedback has no submission date. The bed file is a status snapshot: 0 of 2,000 bed records are marked Occupied. | An appointment month is not the month feedback was submitted. The recorded bed status cannot establish utilization over time. | Present satisfaction for the observed responses. Describe bed status as a snapshot and use dated occupancy records for utilization. |
+
+**Verification scope:** Source totals were recalculated, Week 7 SQL refinements were retested in a compatibility environment, and saved Power BI settings were inspected. The refined SQL still needs confirmation in the project’s MySQL database. Power BI card values, facility filtering and reset behaviour still need a live check.
+
+**Evidence:** Week 8 project guide, Data Analytics Task 11 (p. 6); Joyce’s Week 7 test record (T13–T14) and Week 8 KPI, dashboard and appointment checks.

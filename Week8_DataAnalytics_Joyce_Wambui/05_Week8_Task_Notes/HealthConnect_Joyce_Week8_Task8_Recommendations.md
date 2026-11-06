@@ -1,0 +1,15 @@
+# HealthConnect Rwanda | Week 8 Task 8
+
+**Joyce · Data Analytics · Actionable recommendations**
+
+Start by recording appointment outcomes. In parallel, fix the reporting rules that make partial data look complete. Once HealthConnect can measure attendance consistently, it can test changes to reminders or rescheduling.
+
+| Priority | Recommended action | Proposed lead | How to check progress |
+| --- | --- | --- | --- |
+| **1. Record the outcome of every appointment.** | Add a final status (attended, missed, cancelled or rescheduled) and an outcome timestamp to the appointment export. Agree how long after the scheduled time a booking can be marked as missed, and keep unresolved outcomes visible. | Scheduling and data owners, with Analytics | Track the percentage of eligible bookings with a known outcome each week. Agree on a minimum coverage level before reporting or comparing no-show rates. |
+| **2. Reconcile payments before comparing facilities.** | Match billing and payment records to the authoritative appointment register. Keep payments without a match in an **Unattributed** group. Distinguish **reported revenue**, **collections**, and **outstanding balance** in the report. | Finance and Analytics | Track the share of payment value linked to appointments against the **8.28%** source baseline. Check that linked plus unattributed payments equal total collections on each refresh. |
+| **3. Add checks that catch duplicate or dropped records.** | Use one row per department in the lookup. When joining laboratory records, keep tests that have no appointment match and report them separately. | Analytics | Repeat the Week 7 join checks: the same extract should retain **5,000 distinct appointments** after the department join and **5,000 laboratory tests** after linking. Verify that the join does not create extra appointment rows. |
+| **4. Improve the quality of facility feedback comparisons.** | Capture the feedback submission date and a valid appointment reference. Show the response count alongside each facility average and keep feedback without a confirmed match in the overall result. | Patient Experience and Analytics | Track the share of responses that link to appointments against the **8.34%** baseline. Review response counts and coverage by facility before comparing scores. |
+| **5. Run a small attendance pilot once outcomes are reliable.** | Test reminders or easier rescheduling against the existing process with comparable bookings. If an AI assistant is included, limit it to routine scheduling help based on approved clinic information and refer unresolved requests to staff. | Clinic Operations, with Analytics | Compare no-show rates, completed reschedules and patient feedback. Report outcome coverage alongside the rate. Expand the pilot only if the results support it. |
+
+**Evidence:** Week 8 project guide, Data Analytics task 8 (p. 6); Joyce's Week 7 join tests and Week 8 appointment, KPI and business insight checks. The owners and pilot are proposals.
